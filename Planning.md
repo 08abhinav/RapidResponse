@@ -177,7 +177,6 @@ Since you’re a team of three, here’s how you can split the tasks:
 
 ### Tips for Success
 - **Start Small**: Begin with a tiny graph (e.g., 5 nodes) to test everything, then scale up.
-- **Collaborate**: Use Git (e.g., GitHub) to share code and avoid conflicts.
 - **Keep it Simple**: Focus on functionality first (shortest path), then add visualization.
 - **Test Early**: Verify the algorithm works before integrating it with the UI.
 
