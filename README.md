@@ -30,9 +30,9 @@ The primary objective of RapidResponse is to:
 
 ## Team
 RapidResponse is being developed by:
-- **Abhinav** - [Role, e.g., Algorithm Design]
-- **Daksh** - [Role, e.g., Map Integration]
-- **Rishav** - [Role, e.g., Testing and Optimization]
+- **Abhinav** - Graph creation and Data Management
+- **Daksh** - User Interface and Visualization
+- **Rishav** - Pathfinding Algorithm
 
 
 ## Usage
