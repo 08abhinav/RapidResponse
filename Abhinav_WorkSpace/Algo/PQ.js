@@ -1,27 +1,3 @@
-/* Dijkstra's Algorithm
-It finds the shrotest travel time
-between two points in a weighted graph.
-
-In dijkstra, we always want to process the 
-closest(least weight) node next.
-
-Steps:
-1.Intialize a distance map with infinity for
-all nodes except the start node(0).
-
-2.Maintain a visited set to avoid re-checking nodes.
-
-3.Use a manual priority queue.
-
-4.Always pick the node with the latest distance from the queue.
-
-5.For each negihbor of the current node:
--> if going through the current node is
-shorter, update the neighbor's distance.
-
-6.Repeat until the destination is reached or
-the queue is empty.*/
-
 export class PriorityQueue{
     constructor(){
         this.heap = [];
@@ -58,45 +34,48 @@ export class PriorityQueue{
             if(ele.priority >= parent.priority) break;
             
             // if the new node's priority is less than the parent's, swap
-            this.heap[idx] = parent;
             this.heap[parentIdx] = ele;
+            this.heap[idx] = parent;
             idx = parentIdx;
         }
     }
 
-    _sinkDown(){
+    _sinkDown() {
         let idx = 0;
         const len = this.heap.length;
         const ele = this.heap[0];
-
-        while(true){
-            let leftIdx = 2*idx+1;
-            let rightIdx = 2*idx+2;
-            let swapIdx = null;
-
-            if(leftIdx < len){
-                if(this.heap[leftIdx].priority < ele.priority){
-                    swapIdx = leftIdx;
+    
+        while (true) {
+            let leftIdx = 2 * idx + 1;
+            let rightIdx = 2 * idx + 2;
+            let swap = null;
+    
+            if (leftIdx < len) {
+                const left = this.heap[leftIdx];
+                if (left.priority < ele.priority) {
+                    swap = leftIdx;
                 }
             }
-
-            if (rightIdx < length) {
+    
+            if (rightIdx < len) {
+                const right = this.heap[rightIdx];
                 if (
-                  (swapIdx === null && this.heap[rightIdx].priority < element.priority) ||
-                  (swapIdx !== null && this.heap[rightIdx].priority < this.heap[swapIdx].priority)
+                    (swap === null && right.priority < ele.priority) ||
+                    (swap !== null && right.priority < this.heap[swap].priority)
                 ) {
-                  swapIdx = rightIdx;
+                    swap = rightIdx;
                 }
             }
-
-            if(swapIdx === null) break;
-
-            this.heap[idx] = this.heap[swapIdx];
-            this.heap[swapIdx] = ele
-            idx = swapIdx
+    
+            if (swap === null) break;
+    
+            this.heap[idx] = this.heap[swap];
+            this.heap[swap] = ele;
+            idx = swap;
         }
     }
-
+    
+    
     isEmpty(){
         return this.heap.length === 0;
     }
