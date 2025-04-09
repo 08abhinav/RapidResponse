@@ -1,7 +1,5 @@
 //Adjacency List:
 
-import {PriorityQueue} from "./Sample.js"
-
 const graph = {
     A: [{ node: "B", weight: 4 }, { node: "C", weight: 2 }],
     B: [{ node: "A", weight: 4 }, { node: "C", weight: 1 }, { node: "D", weight: 5 }],
