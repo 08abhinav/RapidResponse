@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RapidResponse - Pathfinding</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h2>RapidResponse - Emergency Route Finder</h2>
+    <div class="controls">
+        <label for="start">Start:</label>
+        <select id="start">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+        </select>
+        <label for="destination">Destination:</label>
+        <select id="destination">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+        </select>
+        <button onclick="findPath()">Find Route</button>
+    </div>
+    <canvas id="mapCanvas" width="600" height="400"></canvas>
+    
+    <script src="pathfinder.js"> </script>
+</body>
+</html>
