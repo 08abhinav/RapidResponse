@@ -11,37 +11,56 @@ const graph = {
 };
 
 function dijkstra(graph, start) {
-    const distances = {};
-    const prev = {};
-    const heap = new PriorityQueue();
-  
-    for (let node in graph) {
-      distances[node] = Infinity;
-      prev[node] = null;
-    }
-  
-    distances[start] = 0;
-    heap.enqueue(start, 0);
-  
-    while (!heap.isEmpty()) {
-        const { value: currentNode } = heap.dequeue();
-  
-      for (let neighbor of graph[currentNode]) {
-        const distance = distances[currentNode] + neighbor.weight;
-  
-        if (distance < distances[neighbor.node]) {
-          distances[neighbor.node] = distance;
-          prev[neighbor.node] = currentNode;
-          heap.enqueue(neighbor.node, distance);
-        }
+  const distances = {};
+  const prev = {};
+  const heap = new PriorityQueue();
+
+  for (let node in graph) {
+    distances[node] = Infinity;
+    prev[node] = null;
+  }
+
+  distances[start] = 0;
+  heap.enqueue(start, 0);
+
+  while (!heap.isEmpty()) {
+      const { value: currentNode } = heap.dequeue();
+
+    for (let neighbor of graph[currentNode]) {
+      const distance = distances[currentNode] + neighbor.weight;
+
+      if (distance < distances[neighbor.node]) {
+        distances[neighbor.node] = distance;
+        prev[neighbor.node] = currentNode;
+        heap.enqueue(neighbor.node, distance);
       }
     }
-  
-    return { distances, prev };
+  }
+
+  return { distances, prev };
 }
   
 
-const {distances, prev} = dijkstra(graph, "D")
+function reconstructPath(strat, end, prev){
+  const path = []
+  let current = end;
+
+  while(current!=null){
+    path.push(current);
+    current = prev[current];
+  }
+
+  path.reverse();
+
+  if(path[0]!==strat){
+    return [];
+  }
+
+  return path;
+}
+
+const {distances, prev} = dijkstra(graph, "A")
+const path = reconstructPath("A", "E", prev)
 
 console.log("Shortest distances from D: ")
 console.log(distances);
@@ -49,10 +68,14 @@ console.log(distances);
 console.log("Previous nodes fro path reconstruction: ");
 console.log(prev);
 
+console.log("Shortest path from A to E: ", path);
+
 
 /* Dijkstra's Algorithm
 It finds the shrotest travel time
 between two points in a weighted graph.
+
+It works on both directed and undirected graph.
 
 In dijkstra, we always want to process the 
 closest(least weight) node next.
