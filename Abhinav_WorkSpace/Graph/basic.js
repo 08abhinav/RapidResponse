@@ -35,7 +35,7 @@ for graph with v vertices and e Edges
 
 // Implementing Low-level graph structure
 
-export class Graph{
+class Graph{
     constructor(){
         this.adjList = {};
     }
