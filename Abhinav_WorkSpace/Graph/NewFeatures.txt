@@ -1,0 +1,2 @@
+Step 1: Before start building the graph, we need to access OpenRouteService to calculate
+the actual distances and routes.
