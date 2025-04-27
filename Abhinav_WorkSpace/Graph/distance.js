@@ -38,45 +38,47 @@ async function getRoute(from, to) {
   }
 }
 
+const data = await getRoute({ lat: 30.291798, lon: 78.050898},{lat: 30.304785, lon: 78.0209032})
+console.log(data.duration, data.distance, data.intersection.length);
 
-(async () => {
-  const places = [
-    "Kanishk Surgical & Super Specialty Hospital, Dehradun",
-    "Shri Mahant Indiresh Hospital, Dehradun",
-    "Medilife Superspeciality Hospital: Premier Multispeciality Hospital and Private Hospital, Dehradun",
-    "Graphic Era Deemed to be University, Dehradun",
-    "Graphic Era Hill University, Dehradun",
-  ];
+// (async () => {
+//   const places = [
+//     "Kanishk Surgical & Super Specialty Hospital, Dehradun",
+//     "Shri Mahant Indiresh Hospital, Dehradun",
+//     "Medilife Superspeciality Hospital: Premier Multispeciality Hospital and Private Hospital, Dehradun",
+//     "Graphic Era Deemed to be University, Dehradun",
+//     "Graphic Era Hill University, Dehradun",
+//   ];
 
-  //Calcuting the lat and lon of each place
-  const locations = []
-  for (const place of places) {
-    const loc = await getLocation(place);
-    if(loc){
-      locations.push(loc);
-    }
-  }
+//   //Calcuting the lat and lon of each place
+//   const locations = []
+//   for (const place of places) {
+//     const loc = await getLocation(place);
+//     if(loc){
+//       locations.push(loc);
+//     }
+//   }
 
-  console.log("Locations:", locations);
+//   console.log("Locations:", locations);
 
-  //Calculating the distance and duration between each pair of places
-  for(let i=0; i<locations.length; i++){
-    for(let j=i+1; j<locations.length; j++){
-      const from = locations[i];
-      const to = locations[j];
-      const route = await getRoute(from, to);
-      if (route) {
-        // If the route is successfully fetched, log the information
+//   //Calculating the distance and duration between each pair of places
+//   for(let i=0; i<locations.length; i++){
+//     for(let j=i+1; j<locations.length; j++){
+//       const from = locations[i];
+//       const to = locations[j];
+//       const route = await getRoute(from, to);
+//       if (route) {
+//         // If the route is successfully fetched, log the information
   
-        console.log(`From: ${route.from} → To: ${route.to}`); // Display the pair of places
-        console.log(`Distance: ${(route.distance / 1000).toFixed(2)} km`); // Convert meters to kilometers and round to 2 decimal places
-        console.log(`Duration: ${(route.duration / 60).toFixed(2)} min`);  // Convert seconds to minutes and round to 2 decimal places
-        console.log(`Intersections: ${route.intersection.length}`); // Count the number of navigation steps (could be treated as intersections or turns)
-        console.log('-------------------------'); // Print a separator for clarity
-      }    
-    }
-  }
-})();
+//         console.log(`From: ${route.from} → To: ${route.to}`); // Display the pair of places
+//         console.log(`Distance: ${(route.distance / 1000).toFixed(2)} km`); // Convert meters to kilometers and round to 2 decimal places
+//         console.log(`Duration: ${(route.duration / 60).toFixed(2)} min`);  // Convert seconds to minutes and round to 2 decimal places
+//         console.log(`Intersections: ${route.intersection.length}`); // Count the number of navigation steps (could be treated as intersections or turns)
+//         console.log('-------------------------'); // Print a separator for clarity
+//       }    
+//     }
+//   }
+// })();
 
 // const from = { lat: 30.2680251, lon: 77.9961187 };
 // const to = { lat: 30.2727947, lon: 78.000611 }; 
