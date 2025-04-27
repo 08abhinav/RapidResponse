@@ -1,0 +1,13 @@
+Week 2 Report: Graph Creation and Data Management
+Objective:
+To expand the RapidResponse area coverage to more real-world
+locations, improve the accuracy of edge weights, and upgrade 
+the graph structure to handle richer metadata such as distance, 
+speed limits, and congestion levels — necessary for realistic 
+emergency routing simulations.
+
+Progrss Made:
+ 1. Graph Expanded to 10+ Nodes
+-> Added new locations: Chemist, Fire Station, Library, Main Gate, Market Area, Bus Stop.
+-> All nodes are interconnected based on actual or approximate road paths in Clement Town.
+> Each node now connects to logical neighboring locations to simulate realistic travel.
