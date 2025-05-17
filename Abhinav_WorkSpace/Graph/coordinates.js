@@ -39,6 +39,20 @@ export async function getLocation(placeName) {
       "Kanishk Surgical & Super Specialty Hospital, Dehradun",
       "Shri Mahant Indiresh Hospital, Dehradun",
       "Medilife Superspeciality Hospital: Premier Multispeciality Hospital and Private Hospital, Dehradun",
+      "Graphic Era Deemed to be University, Dehradun",
+      "Graphic Era Hill University, Dehradun",
+    ];
+  
+    for (const place of places) {
+      const location = await getLocation(place);
+      console.log(location);
+    }
+})();
+(async () => {
+    const places = [
+      "Kanishk Surgical & Super Specialty Hospital, Dehradun",
+      "Shri Mahant Indiresh Hospital, Dehradun",
+      "Medilife Superspeciality Hospital: Premier Multispeciality Hospital and Private Hospital, Dehradun",
       "R G Hospital, Dehradun",
       "Power Life care Hospital, Dehradun",
       "Max Super Speciality Hospital, Dehradun",
