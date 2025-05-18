@@ -1,7 +1,7 @@
 const canvas = document.getElementById("mapCanvas");
 const ctx = canvas.getContext("2d");
 
-// Sample graph (nodes and edges)
+// Sample graph (nodes and edges) with Adjacency List representation
 const graph = {
     A: { B: 2, C: 4 },
     B: { A: 2, C: 1, D: 7 },
@@ -15,29 +15,29 @@ const positions = {
 };
 
 function drawGraph() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "lightgray";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);// Clear previous drawing
+    ctx.fillStyle = "lightgray";// Set background color
+    ctx.fillRect(0, 0, canvas.width, canvas.height);// Fill background
 
-    ctx.strokeStyle = "black";
-    ctx.lineWidth = 2;
+    ctx.strokeStyle = "black";// Set line color
+    ctx.lineWidth = 2;// Set line thickness
     
     for (let node in graph) {
         for (let neighbor in graph[node]) {
-            ctx.beginPath();
-            ctx.moveTo(...positions[node]);
-            ctx.lineTo(...positions[neighbor]);
-            ctx.stroke();
+            ctx.beginPath();               // Start new line
+            ctx.moveTo(...positions[node]);// Move to current node
+            ctx.lineTo(...positions[neighbor]);// Draw line to neighbor
+            ctx.stroke();                     // Render the line
         }
     }
 
     for (let node in positions) {
         ctx.fillStyle = "blue";
         ctx.beginPath();
-        ctx.arc(...positions[node], 10, 0, Math.PI * 2);
+        ctx.arc(...positions[node], 10, 0, Math.PI * 2);// Draw circle for the node
         ctx.fill();
         ctx.fillStyle = "white";
-        ctx.fillText(node, positions[node][0] - 5, positions[node][1] + 5);
+        ctx.fillText(node, positions[node][0] - 5, positions[node][1] + 5);// Label the node
     }
 }
 
@@ -61,10 +61,10 @@ pq.delete(minNode);  // Remove the node from the queue (it's now visited)
 
 // Update the distances for each neighbor of the current node
 for (let neighbor in graph[minNode]) {
-    let alt = distances[minNode] + graph[minNode][neighbor];  // Calculate new path distance
+    let alt = distances[minNode] + graph[minNode][neighbor]; // Calculate new path distance
     if (alt < distances[neighbor]) {
-        distances[neighbor] = alt;  // Update distance if a shorter path is found
-        prev[neighbor] = minNode;   // Record the path (how we got to this neighbor)
+        distances[neighbor] = alt; // Update distance if a shorter path is found
+        prev[neighbor] = minNode; // Record the path (how we got to this neighbor)
     }
 }
 }
@@ -96,7 +96,7 @@ function highlightPath(path) {
 }
 
 function findPath() {
-const start = document.getElementById("start").value;         // Get the start node from input field
+const start = document.getElementById("start").value; // Get the start node from input field
 const destination = document.getElementById("destination").value; // Get the destination node
 
 if (start === destination) {               // Check if start and end are the same
