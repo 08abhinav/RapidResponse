@@ -39,46 +39,41 @@ export async function getLocation(placeName) {
       "Kanishk Surgical & Super Specialty Hospital, Dehradun",
       "Shri Mahant Indiresh Hospital, Dehradun",
       "Medilife Superspeciality Hospital: Premier Multispeciality Hospital and Private Hospital, Dehradun",
-      "Graphic Era Deemed to be University, Dehradun",
-      "Graphic Era Hill University, Dehradun",
-    ];
-  
-    for (const place of places) {
-      const location = await getLocation(place);
-      console.log(location);
-    }
-})();
-(async () => {
-    const places = [
-      "Kanishk Surgical & Super Specialty Hospital, Dehradun",
-      "Shri Mahant Indiresh Hospital, Dehradun",
-      "Medilife Superspeciality Hospital: Premier Multispeciality Hospital and Private Hospital, Dehradun",
       "R G Hospital, Dehradun",
       "Power Life care Hospital, Dehradun",
       "Max Super Speciality Hospital, Dehradun",
-      "Kailash Hospital, Dehradun",
       "Vibhuti Super Speciality Hospital, Dehradun",
-      "Graphic Era Hospital, Dehradun",
-      "Central Hope Town",
-      "Jhajra",
       "ISBT, Dehradun",
-      "Shimla Bypass Chowk, Dehradun",
-      "Shubash Nagar, Dehradun",
-      "Transport Nagar, Dehradun",
-      "Clock Tower, Dehradun",
-      "Paltan Bazaar, Dehradun",
-      "Dehradun Railway Station",
-      "Patel Nagar, Dehradun",
-      "Jakhan, Dehradun",
-      "Pacific Mall, Dehradun",
-      "Doon Business Park, Dehradun",
-      "Saharanpur road, Dehradun",
-      "Graphic Era Deemed to be University, Dehradun",
-      "Graphic Era Hill University, Dehradun",
-      "Uttaranchal University, Dehradun",
-      "Nanda ki Chowki, Dehradun",
-      "Tula's Institute, Dehradun",
-      "Chakarta Road, Dehradun",
+      "Graphic Era Deemed to be University, Dehradun"
+      // "Kanishk Surgical & Super Specialty Hospital, Dehradun",
+      // "Shri Mahant Indiresh Hospital, Dehradun",
+      // "Medilife Superspeciality Hospital: Premier Multispeciality Hospital and Private Hospital, Dehradun",
+      // "R G Hospital, Dehradun",
+      // "Power Life care Hospital, Dehradun",
+      // "Max Super Speciality Hospital, Dehradun",
+      // "Kailash Hospital, Dehradun",
+      // "Vibhuti Super Speciality Hospital, Dehradun",
+      // "Graphic Era Hospital, Dehradun",
+      // "Central Hope Town",
+      // "Jhajra",
+      // "ISBT, Dehradun",
+      // "Shimla Bypass Chowk, Dehradun",
+      // "Shubash Nagar, Dehradun",
+      // "Transport Nagar, Dehradun",
+      // "Clock Tower, Dehradun",
+      // "Paltan Bazaar, Dehradun",
+      // "Dehradun Railway Station",
+      // "Patel Nagar, Dehradun",
+      // "Jakhan, Dehradun",
+      // "Pacific Mall, Dehradun",
+      // "Doon Business Park, Dehradun",
+      // "Saharanpur road, Dehradun",
+      // "Graphic Era Deemed to be University, Dehradun",
+      // "Graphic Era Hill University, Dehradun",
+      // "Uttaranchal University, Dehradun",
+      // "Nanda ki Chowki, Dehradun",
+      // "Tula's Institute, Dehradun",
+      // "Chakarta Road, Dehradun",
     ];
     
     const locations={}
@@ -87,7 +82,7 @@ export async function getLocation(placeName) {
       locations[place] = location
       // console.log(location)
     }
-    fs.writeFileSync('loc_Coords.json', JSON.stringify(locations, null, 2))
+    fs.writeFileSync('locations.json', JSON.stringify(locations, null, 2))
 })();
 
 
