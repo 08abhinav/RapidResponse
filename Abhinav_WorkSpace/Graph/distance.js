@@ -1,5 +1,6 @@
 // OpenRouteService API to get distance and duration between two coordinates
 import 'dotenv/config'; 
+import fs from 'fs';
 import axios from "axios";
 import { getLocation } from "./coordinates.js"; // Assuming this is the correct path to your coordinates.js file
 
@@ -38,8 +39,48 @@ async function getRoute(from, to) {
   }
 }
 
-const data = await getRoute({ lat: 30.291798, lon: 78.050898},{lat: 30.304785, lon: 78.0209032})
-console.log(data.duration, data.distance, data.intersection.length);
+
+(async function getDistances(){
+  try {
+    const data = fs.readFileSync('locations.json','utf8')
+    const locations = JSON.parse(data);
+    const keys = Object.keys(locations);
+    const distances = {}
+    
+    for(let i=0;i<keys.length;i++){
+      for(let j=i+1;j<keys.length;j++){
+        
+        const keyFrom = keys[i];
+        const keyTo = keys[j];
+
+        const from = locations[keyFrom];
+        const to = locations[keyTo];
+
+        const routeData = await getRoute(from, to);
+
+        if(routeData){
+          const routeKey = `${keyFrom}-> ${keyTo}`
+          distances[routeKey] = routeData;
+        }
+
+        fs.writeFile('NewDistance.json', JSON.stringify(distances, null, 2), (err)=>{
+          if(err){
+            console.log("Callback error: ", err.message);
+          }
+        })
+      }
+    }
+  } catch (error) {
+    console.log('Issue in getDistances: ', error.message);
+  }
+  
+})()
+
+
+
+
+// const data = await getRoute({ lat: 30.291798, lon: 78.050898},{lat: 30.304785, lon: 78.0209032})
+// console.log(data.duration, data.distance, data.intersection.length);
 
 // (async () => {
 //   const places = [
