@@ -1,0 +1,11 @@
+{
+  "name": "algo",
+  "version": "1.0.0",
+  "main": "Sample.js",
+  "type": "module",
+  "scripts": {
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
