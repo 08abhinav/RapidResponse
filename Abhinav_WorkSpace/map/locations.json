@@ -2,7 +2,8 @@
   "Kanishk Surgical & Super Specialty Hospital, Dehradun": {
     "name": "Kanishk Surgical and Super Speciality Hospital, Dehradun, Dehradun, Uttarakhand, 248001, India",
     "lat": 30.291798,
-    "lon": 78.050898
+    "lon": 78.050898,
+    "type": "hospital"
   },
   "Shri Mahant Indiresh Hospital, Dehradun": {
     "name": "Shri Mahant Indiresh Hospital, Saharanpur road, Dehradun, Uttarakhand, 248001, India",
@@ -10,41 +11,46 @@
     "lon": 78.0209032,
     "type": "hospital"
   },
-  "Medilife Superspeciality Hospital: Premier Multispeciality Hospital and Private Hospital, Dehradun": {
+  "Medilife Superspeciality Hospital, Dehradun": {
     "name": "Botanica Private, Civic Hospital, Ottawa, Ottawa, Ontario, K1Y 4R2, Canada",
-    "lat": 45.394849,
-    "lon": -75.715084
+    "lat": 30.2883428,
+    "lon": 77.9882539,
+    "type": "invalid"
   },
   "R G Hospital, Dehradun": {
     "name": "Shri Guru Ram Rai Inter College, Indresh Hospital, Dehradun, Uttarakhand, 248001, India",
     "lat": 30.259999,
-    "lon": 78.032327
+    "lon": 78.032327,
+    "type": "hospital"
   },
   "Power Life care Hospital, Dehradun": {
     "name": "Care Clinic, 291/272, Kaulagarh Road, Dehradun, Dehradun, Uttarakhand, 248001, India",
     "lat": 30.338277,
-    "lon": 78.020613
+    "lon": 78.020613,
+    "type": "hospital"
   },
   "Max Super Speciality Hospital, Dehradun": {
     "name": "Max Super Speciality Hospital, Dehradun-Mussoorie Road, Rājpur, Dehradun, Uttarakhand, 248001, India",
     "lat": 30.3736727,
-    "lon": 78.0746863293208,
+    "lon": 78.0711262,
     "type": "hospital"
   },
   "Vibhuti Super Speciality Hospital, Dehradun": {
     "name": "Max Super Speciality Hospital, Dehradun-Mussoorie Road, Dehradun, Uttarakhand, 248001, India",
-    "lat": 30.373828,
-    "lon": 78.074852
+    "lat": 30.3076236,
+    "lon": 77.9435239,
+    "type": "hospital"
   },
   "ISBT, Dehradun": {
-    "name": "ISBT, NH7, Maya Kund, Rishikesh, Dehradun, Uttarakhand, 249201, India",
-    "lat": 30.11294325,
-    "lon": 78.29572464678901,
+    "name": "ISBT, Dehradun, Uttarakhand, 249201, India",
+    "lat": 30.2893203,
+    "lon": 77.9971436,
     "type": "bus_station"
   },
   "Graphic Era Deemed to be University, Dehradun": {
     "name": "Graphic Era (Deemed to be) University, 566/6, Bell Road, Dehradun, Uttarakhand, India",
     "lat": 30.267843,
-    "lon": 77.995722
+    "lon": 77.995722,
+    "type": "source"
   }
 }
