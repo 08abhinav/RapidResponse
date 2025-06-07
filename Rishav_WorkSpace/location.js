@@ -1,5 +1,5 @@
 const allLocations = [
-    { lat: 30.267843, lng: 77.995722, name: 'Graphic Era Deemed to be University' },
+    { lat: 30.268904, lng: 77.9905642, name: 'Graphic Era Deemed to be University' },
     { lat: 30.258485, lng: 77.984587, name: 'Graphic Era Hill University' },
     { lat: 30.2893203, lng: 77.9971436, name: 'ISBT Dehradun' },
     { lat: 30.2670128, lng: 77.935311, name: 'Subhash Nagar' },
@@ -7,10 +7,13 @@ const allLocations = [
     { lat: 30.3165, lng: 78.0322, name: 'Dehradun Railway Station' },
     {lat: 30.3736727, lng: 78.0711262, name: 'Max Super Speciality Hospital, Dehradun' },
     {lat: 30.350057, lng: 77.8915375, name: 'Graphic Era Institute of Medical Sciences' },
-
+    {lat: 30.291798, lng: 78.050898, name: 'Kanishk Surgical & Super Specialty Hospital, Dehradun' },
+    { lat: 30.2727947, lng: 78.000611, name: 'Vibhuti Super Speciality Hospital, Dehradun' },
+    {lat: 30.259999, lng: 78.032327, name: 'R G Hospital, Dehradun' },
+    { lat: 30.338277, lng: 78.020613, name: 'Power Life care Hospital, Dehradun' },
   ];//This array contains all the locations with their latitude, longitude and name
 
-  const map = L.map('map').setView([30.316496, 78.032188], 13);//setView is used to set the initial view of the map
+  const map = L.map('map').setView([30.268904, 77.9905642], 13);//setView is used to set the initial view of the map
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: ' OpenStreetMap'
