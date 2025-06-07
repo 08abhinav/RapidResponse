@@ -11,7 +11,7 @@ const allLocations = [
     { lat: 30.2727947, lng: 78.000611, name: 'Vibhuti Super Speciality Hospital, Dehradun' },
     {lat: 30.259999, lng: 78.032327, name: 'R G Hospital, Dehradun' },
     { lat: 30.338277, lng: 78.020613, name: 'Power Life care Hospital, Dehradun' },
-  ];//This array contains all the locations with their latitude, longitude and name
+  ];//This array contains all the locations with their latitude, longitude and name.
 
   const map = L.map('map').setView([30.268904, 77.9905642], 13);//setView is used to set the initial view of the map
 
