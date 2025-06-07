@@ -1,14 +1,14 @@
 const allLocations = [
     { lat: 30.267843, lng: 77.995722, name: 'Graphic Era Deemed to be University' },
-    { lat: 30.27279465, lng: 78.0006110061085, name: 'Graphic Era Hill University' },
+    { lat: 30.258485, lng: 77.984587, name: 'Graphic Era Hill University' },
     { lat: 30.2893203, lng: 77.9971436, name: 'ISBT Dehradun' },
     { lat: 30.2670128, lng: 77.935311, name: 'Subhash Nagar' },
     {lat: 30.304785, lng: 78.0209032, name: 'Shri Mahant Indiresh Hospital, Dehradun' },
     { lat: 30.3165, lng: 78.0322, name: 'Dehradun Railway Station' },
-    {lat: 30.3736727, lng: 78.0746863293208, name: 'Max Super Speciality Hospital, Dehradun' },
+    {lat: 30.3736727, lng: 78.0711262, name: 'Max Super Speciality Hospital, Dehradun' },
     {lat: 30.350057, lng: 77.8915375, name: 'Graphic Era Institute of Medical Sciences' },
 
-  ];
+  ];//This array contains all the locations with their latitude, longitude and name
 
   const map = L.map('map').setView([30.316496, 78.032188], 13);//setView is used to set the initial view of the map
 
@@ -49,7 +49,7 @@ const allLocations = [
 
     // Draw polyline
     currentLine = L.polyline(route, { color: 'blue', weight: 5 }).addTo(map);
-    map.fitBounds(currentLine.getBounds());
+    map.fitBounds(currentLine.getBounds());// Fit map to the polyline bounds
 
     // Calculate distance in km
     const distance = L.latLng(source.lat, source.lng).distanceTo(L.latLng(destination.lat, destination.lng));
