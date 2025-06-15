@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link  rel="stylesheet" href="landing_page_css.css">
+    </head>
+    <body style="background-image: url('bg.png');
+    background-repeat: no-repeat;background-attachment: fixed;
+  background-size: cover;">
+    <!--<body class="back">-->
+        <div class="banner">
+            <div class="navbar">
+                <img src="logo.png" class="icon">
+                <ul>
+                    <li><a href="https://github.com/08abhinav/RapidResponse" target="_blank">PROJECT DETAILS</a></li>
+                    <li><a href="Synopsis.pdf" target="_blank">ABOUT</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <h1><u>Optimized Emergency Routing System</u></h1>
+                <p>
+                    RapidResponse is an innovative Data Structures and Algorithms (DSA) project designed to optimize the pathfinding process for emergency vehicles.<br> 
+                    In critical situations, time is of the essence, and the ability to navigate quickly and efficiently through traffic can make all the difference in saving lives. <br>
+                    This project leverages advanced DSA techniques to create a system that calculates the most optimal routes for emergency responders, taking into account real-time traffic data, road conditions, and other dynamic factors. <br>
+                    By focusing on both speed and accuracy, RapidResponse aims to improve emergency response times and enhance the overall effectiveness of emergency vehicle navigation systems.
+                </p>
+                <div>
+                    <button type="button" onclick="openPage()"><span></span>Go to Map</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function openPage() {
+                window.location.href = 'map.html';
+            }
+        </script>
+    </body>
+</html>
