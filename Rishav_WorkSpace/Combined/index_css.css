@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.select_container_1 select{
+    width: 22rem;
+    height: 5rem;
+    float:left;
+    margin-top: 40px;
+    margin-left: 20px;
+    padding-left: 15px;
+    font-size: 16px;
+    border: 2.5px solid gray;
+    border-radius: 4px;
+    color:#fff;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    background: #2a2f3b;
+    transform: translateY(0);
+    overflow: visible;
+}
+
+.select_container_1 select:hover{
+    background: #303953;
+}
+/*.select_container .title_left{
+    position: relative;
+    color: #908D92;
+}
+.select_container .title_left::before{
+    position: absolute;
+    color: #908D92;
+    content: "Node 1";
+    top: -24px;
+    left:-200px;
+    background: #fff;
+    width: 66px;
+    height: 22px;
+    text-align: center;
+    font-size: 15px;
+}*/
+.select_container_2 select{
+    width: 22rem;
+    height: 5rem;
+    float:left;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-left: 15px;
+    font-size: 16px;
+    border: 2.5px solid gray;
+    border-radius: 4px;
+    color:#fff;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    background: #2a2f3b;
+    transform: translateY(0);
+    overflow: visible;
+}
+.select_container_2 select:hover{
+    background: #303953;
+}
+/*.select_container .title_right{
+    position: relative;
+    color: #908D92;
+}
+.select_container .title_right::before{
+    position: absolute;
+    color: #908D92;
+    content: "Node 2";
+    top: -24px;
+    left:-200px;
+    background: #fff;
+    width: 66px;
+    height: 22px;
+    text-align: center;
+    font-size: 15px;
+}*/
+
+.button{
+    width: 17rem;
+    height: 4rem;
+    margin-top: 50px;
+    margin-left: 55px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0;
+    border: 3px solid #979faf;
+    border-radius: 25px;
+    color:#fff;
+    background: #2a363b;
+}
+.button u{
+    text-decoration: none;
+}
+.button:hover{
+    background-color: #485a5e;
+}
+
+.switch_map{
+    width: 10rem;
+    height: 2rem;
+    margin-top: 25px;
+    margin-left: 27%;
+    font-size: 15px;
+    text-align: center;
+    padding: 0;
+    border: 3px solid #979faf;
+    border-radius: 25px;
+    color:#fff;
+    background: #2a2f3b;
+}
+
+.switch_map:hover{
+    background-color: #0ad7ee;
+}
