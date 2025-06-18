@@ -1,0 +1,143 @@
+html, body {
+    margin: 0;
+    height: 100%;
+  }
+
+/*.back{
+	height: 100vh;
+	background: linear-gradient(45deg,rgba(225,175,189,.7),rgba(100,216,243,.7),
+	rgba(234,234,198,.7),rgba(245,146,176,.7),rgba(52,219,216,.7)) 0 0 / 1000% no-repeat, url("bg.png")0 0
+	/ cover no-repeat;
+    animation: gradient 40s ease infinite;
+}*/
+
+@keyframes gradient{
+	0%{background-position: 0% 30%, 0 0;}
+	50%{background-position: 100% 70%, 0 0;}
+	100%{background-position: 0% 30%, 0 0;}
+}
+*{
+    font-family: 'Poppins',sans-serif;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.icon{
+    width:300px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 1rem;
+    border-radius: 6px;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li{
+    list-style: none;
+    font-family: 'poppins',sans-serif;
+    font-size: 25px;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+/*.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    border-radius: 20px;
+    color:#fff;
+    box-shadow:0 8px 32px 0 rgba(0,0,0,0.37);
+    backdrop-filter: blur(5px);
+}*/
+
+.content{
+    margin-top: 50px;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color:#dccb14;
+}
+
+.content h1{
+    font-size: 50px;
+    margin-top: 30px;
+}
+
+.content p{
+    margin: 20px auto;
+    font-weight: 200;
+    font-size: 23px;
+}
+
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #fff;
+    background: transparent;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background: #009688;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom:0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover {
+    border: none;
+}
