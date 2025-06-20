@@ -1,0 +1,123 @@
+:root{
+    --body-color:#E4E9F7;
+    --sidebar-color:#fff;
+    --primary-color: green;
+    --toggle-color:#DDD;
+    --text-color:#000;
+
+    --tran-03: all 0.3s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-04: all 0.4s ease;
+}
+
+.sidebar{
+    position: fixed;
+    top:10%;
+    left:0;
+    height: 80%;
+    width:425px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 3px solid #DFE2EC;
+    z-index: 1;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    transition: var(--tran-04);
+    background:rgba(28,28,38,0.7);
+    color: #fff;
+    box-shadow:0 8px 32px 0 rgba(0,0,0,0.37);
+    backdrop-filter: blur(3px);
+    transform: translateX(5%);
+}
+
+.sidebar.close {
+  transform: translateX(-95%);
+}
+
+.sidebar header{
+    position: relative;
+    margin-top: 10px;
+    background-color: lightgray;
+    border-radius: 8px;
+}
+/*==REUSABLE CSS==*/
+.sidebar .text{
+    font-size: 25px;
+    font-weight: 700px;
+    margin-top: 25px;
+    color: var(--text-color);
+}
+.sidebar.close .text{
+    opacity: 0;
+}
+
+.sidebar .image{
+    margin-bottom: 15px;
+    min-width: 60px;
+    display: flex;
+}
+/*==SIDEBAR CSS==*/
+.sidebar .image-text img{
+    width:80px;
+    margin-top: 20px;
+    margin-left: 10px;
+    border-radius: 6px;
+}
+
+.sidebar header .image-text{
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .image-text .header-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.header-text .name{
+    font-weight: 600;
+    margin-left: 15px;
+}
+.header-text .subheading{
+    font-size: 15px;
+    font-weight: 200;
+    font-style: italic;
+    margin-left: 15px;
+}
+
+header .image-text .header-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.text_area{
+    font-size: 15px;
+    font-family: 'Poppins',sans-serif;
+    border: 1.5px solid purple;
+    border-radius: 4px;
+    margin-top: 65px;
+    margin-left: 20px;
+}
+
+.toggle{
+    position: absolute;
+    top: 30px;
+    right: -25px;
+    transform: translateY(30%);
+    transform: translateX(10%);
+    height: 50px;
+    margin-left: 475px; 
+    width: 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 25px;
+    color: black;
+}
+.toggle:hover{
+    background-color: gray;
+    color: white;
+}
