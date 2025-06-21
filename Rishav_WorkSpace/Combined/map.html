@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Source to Destination with Distance Label</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="sidebar_js.js"></script>
+  <link rel="stylesheet" href="project_css.css">
+  <link rel="stylesheet" href="index_css.css">
+  <link rel="stylesheet" href="sidebar_css.css">
+  <!--<style>
+    #map { 
+        height: 620px;
+     }
+    #controls {
+      margin: 10px;
+    }
+    input {
+      padding: 5px;
+      width: 200px;
+      margin: 5px;
+    }
+  </style>-->
+</head>
+<body class="body">
+<!--<div id="controls">
+  <label>Source:</label>
+  <input type="text" id="source" placeholder="src." />
+  <label>Destination:</label>
+  <input type="text" id="destination" placeholder="dest." />
+  <button onclick="connectRoute()">Find</button>
+</div>-->
+
+<div class="container_ui">
+    <div name="top">
+        <nav class="sidebar close" id="sidebar">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="icon.png">
+                    </span>
+                    <div class="text header-text">
+                        <span class="name">RapidResponse</span>
+                        <span class="subheading">Optimized Emergency Routing System</span>
+                    </div>
+                </div>
+
+                <button id="toggle" class="toggle">></button>
+                <script>
+                    const toggleBtn = document.getElementById('toggle');
+                    const sidebar = document.getElementById('sidebar');
+                    toggleBtn.addEventListener('click', () => {
+                    sidebar.classList.toggle('close');
+                });
+                </script>
+            </header>
+            <div class="container_select">
+                <div class="select_container_1">
+                <select id="markerSelect_1">
+                    <option value="999">Source</option>
+                    <option value="0">Graphic Era Deemed to be University</option>
+                    <option value="1">Graphic Era Hill University</option>
+                    <option value="2">ISBT Dehradun</option>
+                    <option value="3">Ghavle Hospital</option>
+                    <option value="4">Shri Mahant Indiresh Hospital</option>
+                    <option value="5">Dehradun Railway Station</option>
+                    <option value="6">Max Super Speciality Hospital, Dehradun</option>
+                    <option value="7">Graphic Era Institute of Medical Sciences</option>
+                    <option value="8">Kanishk Surgical & Super Specialty Hospital</option>
+                    <option value="9">Vibhuti Super Speciality Hospital</option>
+                    <option value="10">R G Hospital</option>
+                    <option value="11">Power Life care Hospital</option>
+                </select>
+                </div>
+                <div class="select_container_2">
+                <select id="markerSelect_2">
+                    <option value="999">Destination</option>
+                    <option value="0">Graphic Era Deemed to be University</option>
+                    <option value="1">Graphic Era Hill University</option>
+                    <option value="2">ISBT Dehradun</option>
+                    <option value="3">Ghavle Hospital</option>
+                    <option value="4">Shri Mahant Indiresh Hospital</option>
+                    <option value="5">Dehradun Railway Station</option>
+                    <option value="6">Max Super Speciality Hospital, Dehradun</option>
+                    <option value="7">Graphic Era Institute of Medical Sciences</option>
+                    <option value="8">Kanishk Surgical & Super Specialty Hospital</option>
+                    <option value="9">Vibhuti Super Speciality Hospital</option>
+                    <option value="10">R G Hospital</option>
+                    <option value="11">Power Life care Hospital</option>
+                </select>
+                </div>
+                <div><button class="button" onclick="connectRoute()"><u>GO</u></button></div>
+            </div>
+            <div><button class="switch_map" onclick="switchMap()">Satellite view</button></div>
+        </nav>
+    </div>
+    <div name="bottom">
+        <div id="map" ></div>
+    </div>
+    <script src="location.js"></script>
+</div>
+</body>
+</html>
